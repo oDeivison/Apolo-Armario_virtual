@@ -1,0 +1,190 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap'); /* Font: Cormorant Garamond*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');/* Font: Dm sans*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,900;1,9..40,900&display=swap');
+
+*, body{
+    margin: 0;
+    padding: 0;
+    font-family: "DM Sans", sans-serif;
+    font-style: normal;
+}
+
+body{
+    background-color: #f0f0f0;
+}
+
+nav{
+    height: 80px;
+    width: 100%;
+    border-bottom: 2px solid black;
+    background-color: white;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.281);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row nowrap;
+}
+
+nav a{
+    color: #0f0f0f;
+    margin: 10px;
+    text-decoration: none;    
+}
+
+nav img{
+    height: 30px;
+    width: 30px;
+}
+
+nav ul{
+    list-style: none;
+    margin-right: 40px;
+    flex-flow: row nowrap;
+    display: flex;
+    align-items: center;
+
+}
+
+ul li{
+    margin-right: 100px;
+    font-size: 2em;
+    font-weight: bold;
+    display: inline;
+    
+}
+
+.dropCloset li{
+    display: block;
+}
+
+.dropCloset a{
+    color: white;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.dropCloset{
+    width: 250px;
+    background: #0f0f0f;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    border-radius: 5px;
+}
+
+ul li:hover ul.dropCloset{
+    display: block;
+}
+
+nav h1{
+    font-size: 3em;
+    margin-left: 70px;
+    font-family: "Cormorant Garamond", serif;
+    
+}
+
+.TituloCloset{
+  margin: 80px 0px 0px 120px;
+  font-size: 4em;
+}
+
+main{
+    margin: 80px;
+}
+
+.cards{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 20px;
+}
+
+.cardP{
+    height: 400px;
+    width: 400px;
+    background-color: #181818;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.img150px{
+    height: 130px;
+    width: 130px;
+}
+
+.cardTexto{
+    height: 30px;
+    width: 400px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: #0f0f0f;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 10px 0px 10px 0px;
+}
+
+.btnX{
+    background-color: #181818;
+    color: white;
+    height: 30px;
+    width: 30px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-left: -33px;
+    margin-bottom:10px;
+    font-size: 20px;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: #0f0f0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+footer p {
+    font-family: "DM Sans";
+    color: white;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: #0f0f0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-top: 665px;
+}
+
+footer p {
+    font-family: "DM Sans";
+    color: white;
+}
+
+.repetidor{
+    display: grid;
+    grid-template: repeat(5, auto); 
+    gap: 10px;
+}
+
+.repetidor img {
+    width: 50px; 
+    height: auto;
+  }

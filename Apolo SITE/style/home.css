@@ -1,0 +1,216 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap'); /* Font: Cormorant Garamond*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');/* Font: Dm sans*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,900;1,9..40,900&display=swap');
+
+*, body{
+    margin: 0;
+    padding: 0;
+    font-family: "DM Sans", sans-serif;
+    font-style: normal;
+}
+
+body{
+    background-color: #f0f0f0;
+
+}
+nav{
+    height: 80px;
+    width: 100%;
+    border-bottom: 2px solid black;
+    background-color: white;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.281);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row nowrap;
+}
+
+nav a{
+    color: #0f0f0f;
+    margin: 10px;
+    text-decoration: none;    
+}
+
+nav img{
+    height: 30px;
+    width: 30px;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    margin-right: 40px;
+    flex-flow: row nowrap;
+    display: flex;
+}
+
+ul li{
+    margin-right: 100px;
+    font-size: 2em;
+    font-weight: bold;
+    display: inline;
+    
+}
+
+nav h1{
+    font-size: 3em;
+    margin-left: 70px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: Bold;
+}
+
+.dropCloset li{
+    display: block;
+}
+
+.dropCloset a{
+    color: white;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.dropCloset{
+    width: 250px;
+    background: #0f0f0f;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    border-radius: 5px;
+}
+
+ul li:hover ul.dropCloset{
+    display: block;
+}
+
+.PEntrar{
+    font-family: 'DM sans';
+
+}
+
+.cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    margin-top: 90px;
+}
+
+.cabecalho img,video{
+    margin-top: 20px;
+    box-shadow: 0px 10px 30px 5px rgba(0, 0, 0, 0.315) ;
+    height: 270px;
+    width: 546px;
+}
+
+.trasicao{
+    min-height: 60vh;
+    background-image: url("../img/waveBackground.png");
+    background-size:cover;
+}
+
+.Pnome{
+    text-align: center;
+    font-family: 'Dm sans';
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.titulo h2{
+    text-align: center;
+    font-size: 4em;
+}
+.titulo h3{
+    font-size:2em;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.titulo h1{
+     font-size: 8em;
+     text-align: center;
+     font-family: 'Cormorant Garamond';
+
+}
+
+.main2{
+    height: 90%;
+    width: 100%;
+    background-color: #737373;   
+    margin: 0px; 
+    font-family:"DM Sans";
+    font-style: normal;
+    font-weight: normal;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.main2 h1{
+    font-size: 7em;
+    color: #0f0f0f;
+    margin-left: 150px;
+    font-family: "Dm Sans";
+    font-optical-sizing: auto;
+    font-style: Bold;
+}
+
+.main2 h2{
+    font-size: 5em;
+    color: #0f0f0f;
+    margin-left: 150px;
+    margin-top: 100px;
+    font-size: 5em;
+    color: #0f0f0f;
+    flex: auto;
+}
+
+.textoTitulo{
+    width: 50%;
+    margin-bottom: 150px;
+}
+
+.buttom > input{
+    padding: 0.5em 1.7em;
+    border: 0.16em solid #0f0f0f;
+    border-radius: 4em;
+    box-sizing: border-box;
+    font-family:"DM Sans";
+    font-weight: 300;
+    font-size: 40px;
+    color: #0f0f00;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 150px 40px 150px 60px;
+    height: 120px;
+    width: 500px;
+}   
+
+@media (max-width: 1100px){
+    .textoTitulo{
+        margin-bottom: 50px;
+    }
+}
+
+.buttom > input:hover{
+    border-color: #272727;
+    cursor: pointer;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: #0f0f0f;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+footer p {
+    margin-top: 40px;
+    font-family: "DM Sans";
+    color: white;
+}
+
+
