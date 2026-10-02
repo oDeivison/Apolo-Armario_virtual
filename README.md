@@ -38,8 +38,6 @@ O projeto foi desenvolvido utilizando:
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=plastic&logo=javascript&logoColor=black)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=plastic&logo=mysql&logoColor=white)
 
----
-
 ## Peças de roupa
 
 Para inserir as peças utilizadas no sistema, foram realizadas fotografias de roupas reais.
