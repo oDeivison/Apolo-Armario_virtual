@@ -52,7 +52,7 @@ A utilização desses equipamentos ajudou a produzir imagens mais nítidas e red
 
 ## Equipe
 
-Projeto desenvolvido por estudantes de Análise e Desenvolvimento de Sistemas da FATEC Araraquara.
+Projeto desenvolvido por estudantes do curso Técnico em informática para internet da ETEC Anna de Oliveira Ferraz.
 
 | Integrante | GitHub |
 | --- | --- |
