@@ -51,17 +51,9 @@ Permite que um novo usuário crie uma conta no Apolo.
 
 Permite visualizar as peças cadastradas e os looks salvos pelo usuário.
 
-### Gerenciar peças
-
-Permite administrar as peças disponíveis no closet.
-
 ### Excluir peça
 
 Permite remover uma peça cadastrada no closet.
-
-### Criar look
-
-Permite montar um novo look utilizando uma camisa, uma calça e um tênis.
 
 ### Selecionar camisa
 
