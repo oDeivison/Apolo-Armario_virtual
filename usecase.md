@@ -10,7 +10,6 @@ flowchart LR
     LOGIN([Realizar login])
     CAD([Cadastrar usuário])
     CLOSET([Visualizar closet])
-    EXC_PECA([Excluir peça])
     LOOK([Criar look])
     CAMISA([Selecionar camisa])
     CALCA([Selecionar calça])
