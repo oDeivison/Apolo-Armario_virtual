@@ -10,9 +10,6 @@ flowchart LR
     LOGIN([Realizar login])
     CAD([Cadastrar usuário])
     CLOSET([Visualizar closet])
-    PECA([Gerenciar peças])
-    ADD_PECA([Adicionar peça])
-    EDIT_PECA([Editar peça])
     EXC_PECA([Excluir peça])
     LOOK([Criar look])
     CAMISA([Selecionar camisa])
@@ -27,13 +24,9 @@ flowchart LR
     USUARIO --- LOGIN
     USUARIO --- CAD
     USUARIO --- CLOSET
-    USUARIO --- PECA
     USUARIO --- LOOK
     USUARIO --- LOOKS
     USUARIO --- LOGOUT
-
-    %% Gerenciamento de peças
-    PECA --- EXC_PECA
 
     %% Criação do look
     LOOK --- CAMISA
