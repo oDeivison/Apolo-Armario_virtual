@@ -16,6 +16,7 @@
             <h1>Criar Conta</h1>
         </header>
 
+        <main>
         <div class="cadastro">
             <form action="userCadastro.php" id="form" method="post">
                 <label for="inome">NOME</label><br>
@@ -28,7 +29,7 @@
                 <input type="password" id="isenha" name="senha" placeholder="EX.SENHA123" required title="Senha"><br>
 
                 <label for="isenha2">CONFIRMAR SENHA</label><br>
-                <input type="password" id="isenha" name="senha2" placeholder="EX.SENHA123" required title="Confirmar Senha"><br>
+                <input type="password" id="isenha2" name="senha2" placeholder="EX.SENHA123" required title="Confirmar Senha"><br>
                 
                 <input type="submit" value="ENTRAR" name="Entrar" id="submit">
 

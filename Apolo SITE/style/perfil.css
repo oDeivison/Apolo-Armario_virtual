@@ -12,6 +12,9 @@
 
 body{
     background-color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 nav{
@@ -92,11 +95,13 @@ label {
     color: rgb(0, 0, 0);
     margin-bottom: 5px;
     display: block;
-    margin: 30px 450px 0px 0px ;
+    margin: 30px 0px 0px 0px;
+    text-align: left;
   }
 
 input[type="text"], input[type="password"] {
-    width: 500px;
+    width: 100%;
+    box-sizing: border-box;
     padding: 10px 0;
     font-size: 1em;
     font-family: "Dm Sans";
@@ -144,7 +149,6 @@ footer{
     display: flex;
     justify-content: center;
     gap: 60px;
-    margin-top: 800px;
 }
 
 footer p {
@@ -176,9 +180,8 @@ footer p {
     background-color: var(--af-white);
   }
 
-  .aSair{
+  a.Btn{
     text-decoration: none;
-    color: black;
   }
   
   /* plus sign */
@@ -232,77 +235,75 @@ footer p {
     transform: translate(2px ,2px);
   }
 
-/* MENU RESPONSIVO */
 
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 30px;
-  height: 25px;
-  margin-right: 40px;
-  cursor: pointer;
-  z-index: 1001;
+/* ==========================================================
+   LAYOUT DA PÁGINA (substitui o antigo <center>)
+   ========================================================== */
+
+.conteudo{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 60px;
 }
 
-.menu-toggle div {
-  width: 30px;
-  height: 3px;
-  background-color: #0f0f0f;
-  border-radius: 3px;
-  transition: all 0.3s ease;
+.conteudo > h1{
+    margin-top: 80px;
+    padding: 0 20px;
 }
 
-/* Mobile styles */
-@media (max-width: 768px) {
-    nav {
+.perfil{
+    width: 100%;
+    max-width: 548px;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+.perfil form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.perfil form p{
+    width: 100%;
+}
+
+.perfil .Btn{
+    margin-top: 30px;
+}
+
+/* ==========================================================
+   RESPONSIVO (o menu fica em menu.css)
+   ========================================================== */
+
+@media (max-width: 768px){
+    .user{
+        margin-top: 40px;
+    }
+
+    .conteudo > h1{
+        margin-top: 50px;
+        font-size: 1.8em;
+    }
+
+    .conteudo{
+        padding-bottom: 40px;
+    }
+
+    footer{
         flex-wrap: wrap;
         height: auto;
-        padding: 0 20px;
+        gap: 6px 24px;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
     }
-    nav h1 {
-        margin-left: 0;
-        font-size: 2.2em;
-    }
-    .menu-toggle {
-        display: flex;
-    }
-    nav ul {
-        flex-direction: column;
-        width: 100%;
-        max-height: 0;
-        overflow: hidden;
+
+    footer p{
         margin: 0;
-        padding: 0;
-        transition: max-height 0.3s ease;
-        background-color: white;
-        border-bottom: 2px solid black;
-    }
-    nav ul.show {
-        max-height: 300px; /* altura suficiente para mostrar todos os itens */
-    }
-    ul li {
-        margin: 15px 0;
-        font-size: 1.5em;
-        margin-right: 0;
-    }
-    ul li img {
-        height: 25px;
-        width: 25px;
-    }
-    .dropCloset {
-        position: relative;
-        background-color: #0f0f0f;
-        border-radius: 0;
-        width: 100%;
-        display: none;
-        margin-top: 10px;
-    }
-    ul li.active > .dropCloset {
-        display: block;
-    }
-    .dropCloset li {
-        margin-left: 20px;
-        margin-bottom: 10px;
+        font-size: 0.9em;
     }
 }

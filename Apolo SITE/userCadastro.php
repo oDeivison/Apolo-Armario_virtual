@@ -29,7 +29,7 @@
                             if ($banco->query($q)) {
                                 $id_usuario = $banco->insert_id;
                                 $_SESSION['id_usuario'] = $id_usuario;
-                                $_SESSION['user_name'] = $nome;
+                                $_SESSION['nome'] = $nome;
                                 echo "<script>  window.location.href = 'home.php'; </script>";
                                 
                                 

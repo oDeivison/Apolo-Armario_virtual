@@ -1,0 +1,129 @@
+/* ==========================================================
+   MENU RESPONSIVO (compartilhado por home, closet, criar e perfil)
+   Carregue DEPOIS do CSS da própria página.
+   ========================================================== */
+
+/* Botão hambúrguer: escondido no computador */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    margin-right: 40px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #0f0f0f;
+    border-radius: 3px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Vira um "X" quando o menu está aberto */
+.menu-toggle.open span:nth-child(1) { transform: translateY(9.5px) rotate(45deg); }
+.menu-toggle.open span:nth-child(2) { opacity: 0; }
+.menu-toggle.open span:nth-child(3) { transform: translateY(-9.5px) rotate(-45deg); }
+
+/* Telas médias (tablet): aperta os espaços para o menu caber */
+@media (max-width: 1024px) {
+    nav h1 { margin-left: 30px; }
+    nav > ul { margin-right: 20px; }
+    nav > ul > li { margin-right: 40px; }
+    nav > ul > li:last-child { margin-right: 0; }
+}
+
+/* Celular: menu hambúrguer */
+@media (max-width: 768px) {
+    nav {
+        box-sizing: border-box; /* senão o padding soma à largura de 100% e cria rolagem horizontal */
+        position: relative;
+        flex-wrap: wrap;
+        height: auto;
+        min-height: 70px;
+        padding: 0 20px;
+    }
+
+    nav h1 {
+        margin-left: 0;
+        font-size: 2.2em;
+    }
+
+    .menu-toggle {
+        display: flex;
+        margin-right: 0;
+    }
+
+    /* Só a lista PRINCIPAL (nav > ul) fica recolhida.
+       Antes o "nav ul" pegava também o submenu do Closet
+       e o cortava (max-height: 0 + overflow: hidden). */
+    nav > ul {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        transition: max-height 0.3s ease;
+    }
+
+    nav > ul.show {
+        max-height: 600px;
+        border-top: 1px solid #d9d9d9;
+    }
+
+    nav > ul > li {
+        margin: 0;
+        padding: 14px 4px;
+        font-size: 1.5em;
+        border-bottom: 1px solid #ececec;
+    }
+
+    nav > ul > li:last-child { border-bottom: none; }
+
+    nav > ul > li > a { margin: 0; }
+
+    nav ul li img {
+        height: 25px;
+        width: 25px;
+        vertical-align: middle;
+    }
+
+    /* Submenu do Closet: abre dentro da lista, empurrando os itens */
+    nav ul.dropCloset {
+        position: static;
+        display: none;
+        width: 100%;
+        max-height: none;
+        overflow: visible;
+        margin: 12px 0 0 0;
+        padding: 6px 0;
+        border-radius: 5px;
+        background-color: #0f0f0f;
+    }
+
+    /* No celular o submenu abre por toque, não por "hover" */
+    nav > ul > li:hover > ul.dropCloset { display: none; }
+    nav > ul > li.active > ul.dropCloset { display: block; }
+
+    nav ul.dropCloset li {
+        margin: 0;
+        padding: 10px 0;
+        font-size: 1em;
+    }
+
+    nav ul.dropCloset a {
+        display: block;
+        margin: 0 0 0 20px;
+        color: white;
+        font-size: 18px;
+    }
+}

@@ -23,11 +23,13 @@ $result = $banco->query($sql);
     <link rel="stylesheet" href="style/closet.css">
     <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
     <title>Apolo - Closet</title>
+    <link rel="stylesheet" href="style/menu.css">
 </head>
 <body>
     <nav>
         <a href="home.php" title="Apolo"><h1>Apolo</h1></a>
-        <ul>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+        <ul id="menu">
             <li><a href="home.php" title="Home">Home</a></li>
             <li><a href="#" title="Closet" style="text-decoration: underline;">Closet</a>
                     <ul class="dropCloset">
@@ -74,5 +76,6 @@ $result = $banco->query($sql);
         <p>Julio Cesar de Lima Dos Santos</p>
         <p>Eduardo Donizete de Oliveira</p>
     </footer>
+    <script src="js/menu.js"></script>
 </body>
 </html>

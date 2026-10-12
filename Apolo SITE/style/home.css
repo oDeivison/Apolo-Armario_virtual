@@ -213,4 +213,128 @@ footer p {
     color: white;
 }
 
+/* ==========================================================
+   RESPONSIVO (o menu fica em menu.css)
+   ========================================================== */
 
+/* Tablet: empilha os blocos */
+@media (max-width: 1024px){
+    .cabecalho{
+        margin-top: 50px;
+        gap: 20px;
+    }
+
+    .cabecalho video{
+        width: 90%;
+        max-width: 546px;
+        height: auto;
+        aspect-ratio: 546 / 270;
+    }
+
+    .titulo h2{
+        font-size: 3.2em;
+    }
+
+    .titulo h1{
+        font-size: 6em;
+    }
+
+    .trasicao{
+        min-height: 40vh;
+    }
+
+    .textoTitulo{
+        width: 100%;
+        margin-bottom: 0px;
+        padding: 50px 40px 0px 40px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .main2 h1{
+        font-size: 4.5em;
+        margin-left: 0;
+    }
+
+    .main2 h2{
+        font-size: 2.2em;
+        margin: 30px 0px 0px 0px;
+    }
+
+    .buttom{
+        width: 100%;
+        text-align: center;
+    }
+
+    .buttom > input{
+        width: 420px;
+        max-width: calc(100% - 48px);
+        height: 90px;
+        font-size: 30px;
+        margin: 50px 0px 80px 0px;
+    }
+}
+
+/* Celular */
+@media (max-width: 768px){
+    .cabecalho{
+        margin-top: 30px;
+    }
+
+    .cabecalho video{
+        width: calc(100% - 32px);
+    }
+
+    .titulo h2{
+        font-size: 2.4em;
+    }
+
+    .titulo h3{
+        font-size: 1.5em;
+    }
+
+    .titulo h1{
+        font-size: 4.5em;
+    }
+
+    .Pnome{
+        font-size: 1.5em;
+    }
+
+    .trasicao{
+        min-height: 25vh;
+    }
+
+    .textoTitulo{
+        padding: 40px 20px 0px 20px;
+    }
+
+    .main2 h1{
+        font-size: 2.6em;
+    }
+
+    .main2 h2{
+        font-size: 1.4em;
+        margin-top: 20px;
+    }
+
+    .buttom > input{
+        height: 64px;
+        font-size: 22px;
+        margin: 36px 0px 60px 0px;
+    }
+
+    footer{
+        flex-wrap: wrap;
+        height: auto;
+        gap: 6px 24px;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    footer p{
+        margin: 0;
+        font-size: 0.9em;
+    }
+}

@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="style/criar.css">
     <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
     <title>Apolo - Criar</title>
+    <link rel="stylesheet" href="style/menu.css">
 </head>
 <body>
     <nav>
         <a href="home.php" title="Apolo"><h1>Apolo</h1></a>
-        <ul>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+        <ul id="menu">
             <li><a href="home.php" title="Home">Home</a></li>
             <li><a href="#" title="Closet" style="text-decoration: underline;">Closet</a>
                     <ul class="dropCloset">
@@ -32,7 +34,7 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="project-img">
-            <img class="imagem-150" src="img/CAMISA-BRANCA.png" alt="Camisa branca">
+            <img class="imagem-150" src="img/camisa-branca.png" alt="Camisa branca">
           </div>
         </div>
         <div class="swiper-slide">
@@ -176,7 +178,7 @@
         <div class="imagems">
           <img src="img/camisa-branca.png" alt="camisa branca" class="img-popup" id="camisa-popup">
           <img src="img/calca-cargo-preto.png" alt="calca cargo bege" class="img-popup" id="calca-popup">
-          <img src="img/balenciaga.png" alt="balenciaga" class="img-popup" id="tenis-popup">
+          <img src="img/nike-precision.png" alt="Nike Precision" class="img-popup" id="tenis-popup">
         </div>
         
 
@@ -225,6 +227,8 @@
   const initialImage1 = initialSlide1.querySelector('img');
   if (initialImage1) {
     document.getElementById('nomeCamisa1').textContent = initialImage1.alt;
+    document.getElementById('urlCamisa').value = initialImage1.src;
+    document.getElementById('camisa-popup').src = initialImage1.src;
   }
 
   // Inicializa o swiper para o segundo carrossel (calça)
@@ -256,6 +260,8 @@
   const initialImage2 = initialSlide2.querySelector('img');
   if (initialImage2) {
     document.getElementById('nomeCalca1').textContent = initialImage2.alt;
+    document.getElementById('urlCalca').value = initialImage2.src;
+    document.getElementById('calca-popup').src = initialImage2.src;
   }
 
   // Inicializa o swiper para o terceiro carrossel (tênis)
@@ -287,6 +293,8 @@
   const initialImage3 = initialSlide3.querySelector('img');
   if (initialImage3) {
     document.getElementById('nomeTenis1').textContent = initialImage3.alt;
+    document.getElementById('urlTenis').value = initialImage3.src;
+    document.getElementById('tenis-popup').src = initialImage3.src;
   }
 
   
@@ -353,5 +361,6 @@
 
 
 
+    <script src="js/menu.js"></script>
 </body>
 </html>

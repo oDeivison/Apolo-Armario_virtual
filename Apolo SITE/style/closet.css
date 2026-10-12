@@ -12,6 +12,9 @@
 
 body{
     background-color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 nav{
@@ -90,6 +93,7 @@ nav h1{
 }
 
 main{
+    flex: 1;
     margin: 80px;
 }
 
@@ -170,7 +174,6 @@ footer{
     justify-content: center;
     align-items: center;
     gap: 60px;
-    margin-top: 665px;
 }
 
 footer p {
@@ -188,3 +191,82 @@ footer p {
     width: 50px; 
     height: auto;
   }
+
+/* ==========================================================
+   RESPONSIVO (o menu fica em menu.css)
+   ========================================================== */
+
+/* Tablet */
+@media (max-width: 1024px){
+    .TituloCloset{
+        margin: 60px 0px 0px 40px;
+        font-size: 3.2em;
+    }
+
+    main{
+        margin: 40px;
+    }
+
+    .cards{
+        justify-content: center;
+    }
+}
+
+/* Celular */
+@media (max-width: 768px){
+    .TituloCloset{
+        margin: 40px 24px 0px 24px;
+        font-size: 2.6em;
+    }
+
+    main{
+        margin: 24px 16px;
+    }
+
+    .card{
+        position: relative;
+        width: 100%;
+        max-width: 400px;
+        margin: 16px 0px;
+    }
+
+    .cardP{
+        width: 100%;
+        height: auto;
+        min-height: 400px;
+        padding-top: 20px;
+        box-sizing: border-box;
+    }
+
+    .cardTexto{
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+    /* o X de excluir fica no canto do card */
+    .card form{
+        position: absolute;
+        top: 8px;
+        right: 8px;
+    }
+
+    .btnX{
+        margin: 0;
+        cursor: pointer;
+    }
+
+    footer{
+        flex-wrap: wrap;
+        height: auto;
+        gap: 6px 24px;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    footer p{
+        margin: 0;
+        font-size: 0.9em;
+    }
+}

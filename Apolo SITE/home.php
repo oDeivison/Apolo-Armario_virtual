@@ -16,11 +16,13 @@
     <link rel="stylesheet" href="style/home.css">
     <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
     <title>Apolo - Home</title>
+    <link rel="stylesheet" href="style/menu.css">
 </head>
 <body>
     <nav>
         <a href="home.php" title="Apolo" class="tituloNav"><h1>Apolo</h1></a>
-        <ul>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+        <ul id="menu">
             <li><a href="home.php" style="text-decoration: underline;" title="Home">Home</a></li>
             <li><a href="#" title="Closet">Closet</a>
                     <ul class="dropCloset">
@@ -47,7 +49,7 @@
     <div class="cabecalho">
         <div class="titulo">
         <h2>Bem-vindo</h2> <?php if ($usuario != 0 && $usuario != null) {
-            echo"<p class='Pnome'>$nome</p>";
+            echo"<p class='Pnome'>" . htmlspecialchars($nome) . "</p>";
              } ?>
         <h3>ao</h3>
          <h1>Apolo</h1>
@@ -87,5 +89,6 @@
         <p>Eduardo Donizete de Oliveira</p>
     </footer>
     
+    <script src="js/menu.js"></script>
 </body>
 </html>

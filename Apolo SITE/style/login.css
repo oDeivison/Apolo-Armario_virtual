@@ -171,3 +171,93 @@ footer p {
     font-family: "DM Sans";
     color: white;
 }
+
+/* ==========================================================
+   RESPONSIVO
+   ========================================================== */
+
+/* Tablet */
+@media (max-width: 1024px){
+    nav h1{
+        margin-left: 30px;
+    }
+
+    .titulo{
+        margin: 60px 0px 0px 80px;
+    }
+
+    .titulo h1{
+        font-size: 5em;
+    }
+
+    .login{
+        margin: 30px 80px 0px 80px;
+    }
+
+    .login form{
+        max-width: 700px;
+    }
+
+    input[type="text"], input[type="password"], input[type="email"]{
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* Celular */
+@media (max-width: 768px){
+    nav{
+        height: 70px;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    nav h1{
+        margin-left: 0;
+        font-size: 2.2em;
+    }
+
+    .cabecalho{
+        justify-content: center;
+    }
+
+    .titulo{
+        margin: 40px 20px 0px 20px;
+    }
+
+    .titulo h2{
+        font-size: 2em;
+    }
+
+    .titulo h1{
+        font-size: 4em;
+        text-align: center;
+    }
+
+    .login{
+        margin: 10px 24px 0px 24px;
+    }
+
+    input[type="submit"]{
+        width: 100%;
+        margin: 40px 0px 30px 0px;
+    }
+
+    .login p{
+        margin: 0px 0px 60px 0px;
+        text-align: center;
+    }
+
+    footer{
+        flex-wrap: wrap;
+        height: auto;
+        gap: 6px 24px;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    footer p{
+        font-size: 0.9em;
+    }
+}

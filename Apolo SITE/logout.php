@@ -1,25 +1,10 @@
 <?php
-
 session_start();
-   
-session_unset();
-session_destroy();  
 
+// Limpa as variáveis da sessão
+$_SESSION = [];
 
-header("Cache-Control:no-store,no-cache,must-revalidate,max-age=0");
-header("Cache-control:post-check=0,pre-check=0",false);
-header("Pragma:no-cache");
-
-
-header("Location: home.php");
-
-exit();
-?>
-
-<!-- session_start();
-// Limpa todas as variáveis da sessão
-$_SESSION = array();
-// Apaga o cookie da sessão
+// Apaga o cookie da sessão no navegador
 if (ini_get("session.use_cookies")) {
     $params = session_get_cookie_params();
     setcookie(session_name(), '', time() - 42000,
@@ -27,14 +12,13 @@ if (ini_get("session.use_cookies")) {
         $params["secure"], $params["httponly"]
     );
 }
-// Destrói a sessão
+
+// Destrói a sessão no servidor
 session_destroy();
-// Envia headers para evitar cache
-header("Expires: Tue, 01 Jan 2000 00:00:00 GMT");
-header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+
+// Evita que o navegador mostre páginas antigas (botão "voltar")
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
-header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
-// Redireciona para home.php
+
 header("Location: home.php");
-exit(); -->
+exit();
